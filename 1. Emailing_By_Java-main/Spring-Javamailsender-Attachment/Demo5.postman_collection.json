@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "adca180e-de39-4adb-bacd-9bbc0178df96",
+		"name": "Demo5",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4662588",
+		"_collection_link": "https://youtube-8739.postman.co/workspace/Spring-Mail~85a48f69-9910-4295-bd18-4857fd690d57/collection/4662588-adca180e-de39-4adb-bacd-9bbc0178df96?action=share&source=collection_link&creator=4662588"
+	},
+	"item": [
+		{
+			"name": "mail/sendBasic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to\": \"scaleupindiayt@gmail.com\",\r\n    \"subject\": \"Basic Mail from Spring Boot\",\r\n    \"body\": \"This mail was sent by Spring Boot, you can also learn the same by watching the video.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mail/sendBasic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mail",
+						"sendBasic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mail/sendAdvanced",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to\": \"scaleupindiayt@gmail.com\",\r\n    \"subject\": \"Advanced Mail from Spring Boot\",\r\n    \"body\": \"Abhi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mail/sendAdvanced",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mail",
+						"sendAdvanced"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

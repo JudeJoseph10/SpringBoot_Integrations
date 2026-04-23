@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "f008d8b4-30c8-4515-b970-ff5f206d6f18",
+		"name": "Demo7",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4662588",
+		"_collection_link": "https://youtube-8739.postman.co/workspace/Spring-Mail~85a48f69-9910-4295-bd18-4857fd690d57/collection/4662588-f008d8b4-30c8-4515-b970-ff5f206d6f18?action=share&source=collection_link&creator=4662588"
+	},
+	"item": [
+		{
+			"name": "mail/sendBasic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to\": \"scaleupindiayt@gmail.com\",\r\n    \"subject\": \"Basic Mail from Spring Boot\",\r\n    \"body\": \"This mail was sent by Spring Boot, you can also learn the same by watching the video.\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mail/sendBasic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mail",
+						"sendBasic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mail/sendAdvanced",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"to\": \"scaleupindiayt@gmail.com\",\r\n    \"subject\": \"Advanced Mail from Spring Boot\",\r\n    \"body\": \"Abhi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/mail/sendAdvanced",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mail",
+						"sendAdvanced"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "mail/sendWithAttachment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "mailDTO",
+							"value": "{\n    \"to\": \"scaleupindiayt@gmail.com\",\n    \"subject\": \"Advanced Mail from Spring Boot\",\n    \"body\": \"Abhi\"\n}",
+							"contentType": "application/json",
+							"type": "text"
+						},
+						{
+							"key": "attachments",
+							"type": "file",
+							"src": "/C:/Users/abhis/Downloads/sample.pptx"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/mail/sendWithAttachment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"mail",
+						"sendWithAttachment"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

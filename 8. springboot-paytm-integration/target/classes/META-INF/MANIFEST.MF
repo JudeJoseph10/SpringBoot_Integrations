@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Built-By: LENOVO
+Build-Jdk: 21.0.7
+Implementation-Title: paytm-payment-gateway
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: com.javatechie
+Implementation-URL: https://projects.spring.io/spring-boot/#/spring-boot
+ -starter-parent/paytm-payment-gateway
+Created-By: Maven Integration for Eclipse
+
