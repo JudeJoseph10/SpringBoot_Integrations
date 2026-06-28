@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"/>
+<head>
+	<meta charset="ISO-8859-1">
+	<title> Captcha Verification</title>
+</head>
+<body>
+	<h3>Captcha Verification</h3>
+	<form th:action="@{/app/verify}" method="POST" th:object="${captcha}">
+	<label for "image"> CAPTCHA</label>
+	<input type="image" id="image" th:src="*{'data:realCaptcha/jpg;base64,'+realCaptcha}">
+	<input type="hidden" th:field="*{hiddenCaptcha}"/><br>
+	<lable for "captchatext"> Enter Captch text </lable>
+	<input type="text" id="captchatext" th:field="*{captcha}" />
+	<input type="submit" value="Verify" />
+	</form>
+	<div th:if="${message!=null}">
+		<span style="color:red;" th:text="${message}"></span>
+	</div>
+</body>
+</html>
